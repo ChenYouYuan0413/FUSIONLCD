@@ -6,11 +6,11 @@
   # 'path_dataset' : 'E:\work\Project\dataset\FUSION'
   # 'path_result' : 'E:\work\Project\results\FUSIONLCD\bev2'
   
-  'path_dataset' : '/data2/caodanyang/project/dataset/FUSION'
-  'path_result': '/data4/caodanyang/results/FUSIONLCD'
-  'train_flag' : 0
+  'path_dataset' : '/home/coop8/chenyouyuan/FUSIONLCD'
+  'path_result': '/home/coop8/chenyouyuan/FUSIONLCD/result'
+  'train_flag' : 1
   'validate_flag' : 0
-  'test_flag' : 1
+  'test_flag' : 0
   'flag' : 'bev' 
   'cuda' : 1
   # TRAINING
@@ -21,7 +21,7 @@
   'beta2' : 0.999
   'eps' : 1.e-8
   'weight_decay' : 5.e-6
-  'load_model' : 1
+  'load_model' : 0
   #FUSION
   # 'last_model' : '/data4/caodanyang/results/FUSIONLCD/08310/models/checkpoint_079.pth.tar'
   #BEV
