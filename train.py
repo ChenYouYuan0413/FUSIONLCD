@@ -408,7 +408,7 @@ if __name__ == '__main__':
     torch.cuda.manual_seed(123)
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--result_name', type=str,default='07030',help='log name of result')
+    parser.add_argument('--result_name', type=str,default='log',help='log name of result')
     parser.add_argument('--pro_name', type=str,default='python',help='name of process')
     parser.add_argument('--info', type=str,default='python',help='name of process')
     args = parser.parse_args()

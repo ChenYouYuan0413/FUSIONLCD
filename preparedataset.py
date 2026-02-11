@@ -97,9 +97,9 @@ def todataset(kitti_root, dataset_root):
 
 
 if __name__ == '__main__':
-    k360 = '/data4/caodanyang/dataset/KITTI-360'
-    k = '/data4/caodanyang/dataset/kitti/odometry'
+    k360 = '/home/coop8/chenyouyuan/FUSIONLCD/KITTI360'
+    k = '/home/coop8/chenyouyuan/FUSIONLCD/KITTI'
     k3602k(k, k360)
-    kitti_root = '/data4/caodanyang/dataset/kitti/odometry'
-    dataset_root = '/data2/caodanyang/project/dataset/FUSION/sequences'
+    kitti_root = '/home/coop8/chenyouyuan/FUSIONLCD/KITTI'
+    dataset_root = '/home/coop8/chenyouyuan/FUSIONLCD/sequences'
     todataset(kitti_root, dataset_root)
