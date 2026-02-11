@@ -90,11 +90,11 @@ class KITTILoader3DPosesOnlyLoopPositives(Dataset):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--root_folder', default='/data2/caodanyang/project/dataset/FUSION',
+    parser.add_argument('--root_folder', default='/home/coop8/chenyouyuan/FUSIONLCD',
                         help='dataset directory')
     args = parser.parse_args()
     base_dir = args.root_folder
-    for sequence in ['54']:#'00', '05', '06', '07', '08', '09', '50', '54', '55', '56', '59', '120205','130405'
+    for sequence in ['00', '05', '06', '07', '08', '09', '50', '54', '55', '56', '59']:#'00', '05', '06', '07', '08', '09', '50', '54', '55', '56', '59', '120205','130405'
         if int(sequence) < 50:
             poses_file = base_dir + "/sequences/" + sequence + "/poses.txt"
         elif int(sequence)<100:
@@ -124,7 +124,7 @@ if __name__ == '__main__':
         loop_files = np.array(loop_files)
         num_reverse_file = int(np.sum(loop_files[:, 1]<0))
         num_reverse_pairs = int(np.sum(np.abs(loop_files[:, 1])))/2
-        # with open(lc_gt_file, 'wb') as f:
-        #     pickle.dump(lc_gt, f)
+        with open(lc_gt_file, 'wb') as f:
+            pickle.dump(lc_gt, f)
         print('Sequence %02d done,%05d files, %05d files with loop, %05d[%.4f] files only has reverse loop, %05d loop pairs, %05d[%.4f] reverse loop' %
               (int(sequence), len(dataset), len(loop_files), num_reverse_file, num_reverse_file / len(loop_files), len(loop_pairs),num_reverse_pairs,num_reverse_pairs/len(loop_pairs)))
