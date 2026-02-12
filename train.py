@@ -13,7 +13,7 @@ from dataset import KittiTotalLoader
 from evaluate_lcd import lcd
 from loss import TotalLoss
 
-test_step = 10
+test_step = 10 # 保存测试点的步长
 
 def save_checkpoint(model, optimizer, loss_total_fun, epoch, iter_train, path_result):
     if (epoch + 1) % test_step == 0 and epoch+1>=test_step:
